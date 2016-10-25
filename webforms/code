@@ -1,0 +1,95 @@
+<div class="form-group row has-warning">
+				<label for="first_name" class="col-xs-2 col-form-label">First Name*</label>
+					<div class="col-xs-10">
+						<input class="form-control form-control-warning" required="required" id="inputWarning1" name="first_name" maxlength="50"
+							size="30" placeholder="Required!" value="<?php  if (isset($_POST['first_name'])) echo strip_tags($_POST['first_name']); ?>" 
+							type="text">
+						</div>
+			</div>
+			
+			<div class="form-group row has-warning">	 
+				<label for="last_name" class="col-xs-2 col-form-label">Last Name*</label>
+					<div class="col-xs-10">
+						<input class="form-control form-control-warning" required="required" style="float: left" name="last_name" maxlength="50"
+							size="30" placeholder="Required!" value="<?php  if (isset($_POST['last_name'])) echo strip_tags($_POST['last_name']); ?>" >
+					</div>
+			</div>
+					<div class="form-group row has-warning">
+					<label for="email" class="col-xs-2 col-form-label">Email*</label>
+					<div class="col-xs-10">
+					<input class="form-control form-control-warning" name="email" maxlength="80" size="30" placeholder="Required!"
+							value="<?php  if (isset($_POST['email'])) echo strip_tags($_POST['email']); ?>"  type="text">
+					</div>
+			</div>		
+			<div class="form-group has-warning">
+							<label for="bus_name">Name of your organisation:*<br></label> <br><input class="form-control form-control-warning" name="bus_name" placeholder="Required!" value="<?php  if (isset($_POST['bus_name'])) echo strip_tags($_POST['bus_name']); ?>"
+							type="text"> 
+							
+</div>
+<br>
+
+<div class="bd-example reduce"><b>
+If you already have a promotional text you can copy it into one field and continue to upload images.<br>
+Otherwise please continue and fill out the questionaire.
+<button class="btn btn-primary yes_button" id="yes_button" type="button" name="yes" value="yes">Yes</button>
+<button class="btn btn-primary no_button" id="no_button" type="button" name="no" value="no">No</button>
+</b>
+</div>
+	<div class="questionaire" id="yes">
+
+<div id="yes" class="form-group">
+	
+
+							<label for="describe" id="yes">Describe exactly you sell or do.</label><br><textarea class="form-control" id="yes" style="float: none;" name="describe" maxlength="10000" cols="68" rows="8" placeholder="What's up?" value="" type="text"><?php if(isset($_POST['describe'])){echo strip_tags($_POST['describe'], ENT_QUOTES);}?></textarea>
+</div>							
+
+						<label for="comments" id="yes"><br>How long have you been doing it and
+							how would you describe your philosophy or mission statement. What
+							makes it unique?</label>
+						<textarea class="form-control" id="yes" data-gramm="" style="float: none;" name="mission"
+							maxlength="10000" cols="68" rows="8" placeholder="What's up?"
+							value="" required="required"><?php if(isset($_POST['mission'])){echo strip_tags($_POST['mission'], ENT_QUOTES);}?></textarea>
+							
+
+<br> <label for="comments" id="yes"><br>Tell me something cool about
+							yourself, services and achievements.</label><br>
+						<textarea id="yes" style="float: none;" name="achievements"
+							maxlength="10000" cols="68" rows="8" placeholder="What's up?"
+							value="" required="required"></textarea>
+							<div>
+						
+							
+
+								
+
+						<br> <label id="yes" for="urls"><br>Copy your links here:</label> <br>
+						<textarea style="float: none;" name="links" maxlength="10000"
+							cols="68" rows="5" placeholder="What's up?"></textarea>
+			</div>
+      
+      
+      </div>
+      <div class="no" id="no yes">
+							<br> <label for="comments" id="yes"><br>Copy your self written article
+							here.</label><br>
+						<textarea id="yes" data-gramm="" style="float: none;" name="more"
+							maxlength="10000" cols="68" rows="8" placeholder="What's up?"
+							value="" required="required"></textarea>
+						
+						<label for="uploads" id="yes no"><br>Upload your images. Only jpg, jpeg,
+								png files accepted 2mb or smaller. Maximum 10 files:</label>
+						<input id="yes" class="disabled" name="files[]" multiple type="file">
+					
+<br>
+							<input class="btn btn-primary" name="submit" id="submit" value="Submit" type="submit">
+			</div>
+		</div>
+							</div>
+		</form>
+    
+		
+		<?php
+		
+ } 
+ ?>
+		</body>
